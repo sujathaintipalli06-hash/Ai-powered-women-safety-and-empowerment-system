@@ -1,0 +1,78 @@
+{
+  "api_endpoints": {
+    "/api/users": {
+      "status_code": 200,
+      "response_time": 0.003957,
+      "success": true
+    },
+    "/api/safety/location": {
+      "status_code": 200,
+      "response_time": 0.004425,
+      "success": true
+    },
+    "/api/safety/alert": {
+      "status_code": 201,
+      "response_time": 0.003376,
+      "success": true
+    },
+    "/api/safety/emergency-contacts/1": {
+      "status_code": 200,
+      "response_time": 0.00217,
+      "success": true
+    },
+    "/api/safety/crime-data": {
+      "status_code": 200,
+      "response_time": 0.001762,
+      "success": true
+    },
+    "/api/safety/predict-threat": {
+      "status_code": 200,
+      "response_time": 0.002318,
+      "success": true
+    }
+  },
+  "ai_performance": {
+    "predictions": [
+      {
+        "scenario": "Daytime, city center",
+        "threat_level": "Low",
+        "threat_score": "0",
+        "response_time": 1.9340713024139404
+      },
+      {
+        "scenario": "Night time, city center",
+        "threat_level": "Medium",
+        "threat_score": "1",
+        "response_time": 0.007653713226318359
+      },
+      {
+        "scenario": "Daytime, suburban area",
+        "threat_level": "Low",
+        "threat_score": "0",
+        "response_time": 0.007586956024169922
+      },
+      {
+        "scenario": "Night time, suburban area",
+        "threat_level": "Medium",
+        "threat_score": "1",
+        "response_time": 0.007722139358520508
+      },
+      {
+        "scenario": "Late night, outskirts",
+        "threat_level": "High",
+        "threat_score": "2",
+        "response_time": 0.008151769638061523
+      }
+    ],
+    "avg_response_time": 0.3930371761322021,
+    "total_scenarios": 5
+  },
+  "load_performance": {
+    "total_requests": 50,
+    "successful_requests": 50,
+    "success_rate": 100.0,
+    "avg_response_time": 0.003036046028137207,
+    "max_response_time": 0.0053899288177490234,
+    "min_response_time": 0.002460002899169922
+  }
+}

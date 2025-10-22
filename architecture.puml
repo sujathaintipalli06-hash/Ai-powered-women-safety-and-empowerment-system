@@ -1,0 +1,49 @@
+'''
+@startuml
+!theme vibrant
+
+left to right direction
+
+actor "User" as user
+
+rectangle "Mobile App" as app {
+  usecase "Real-time Location Tracking" as tracking
+  usecase "SOS Alerts" as sos
+  usecase "Safe Route Suggestions" as routes
+  usecase "Voice Activation" as voice
+  usecase "Community Support" as community
+}
+
+rectangle "Backend Server" as server {
+  usecase "User Management" as user_mgmt
+  usecase "Data Storage" as db
+  usecase "AI Engine" as ai_engine
+  usecase "API" as api
+}
+
+rectangle "AI Engine" as ai {
+    usecase "Predictive Threat Analysis" as prediction
+    usecase "Automatic Threat Detection" as detection
+}
+
+cloud "External Services" as external {
+    usecase "Police API" as police_api
+    usecase "Map API" as map_api
+}
+
+user -- app
+app -- api
+
+api -- user_mgmt
+api -- db
+api -- ai_engine
+
+ai_engine -- prediction
+ai_engine -- detection
+
+api -- police_api
+api -- map_api
+
+@enduml
+'''
+
